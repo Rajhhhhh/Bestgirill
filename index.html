@@ -2,219 +2,158 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Page One</title>
-  <link rel="stylesheet" href="page1.css" />
+  <title>My Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    #liveDate {
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 2rem;
       font-weight: bold;
-      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
-    #addItemBtn {
-      margin-bottom: 10px;
+
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
     }
-    .item-row {
+
+    .image-container img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .message {
+      text-align: center;
+      margin: 20px auto;
+      font-size: 1.2rem;
+      color: #333;
+      max-width: 800px;
+      padding: 10px;
+    }
+
+    .highlight {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .box-container {
       display: flex;
-      gap: 2%;
-      margin-bottom: 5px;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
     }
-    .item-row input[type="text"] {
-      flex: 1;
-      padding: 5px;
+
+    .custom-section {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      height: 300px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      padding: 20px;
       box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    .item-row .weight-input,
-    .item-row .rate-input,
-    .item-row .total-input {
-      width: 20%;
+
+    .view-all-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: white;
+      color: #e53935;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
     }
-    .item-row button.delete-btn {
-      width: 8%;
-      padding: 5px;
-      cursor: pointer;
+
+    .view-all-btn:hover {
+      background-color: #fce4e4;
     }
-    .customer-info {
-      margin-bottom: 10px;
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .custom-section {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+      }
+      .message {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+      .header {
+        font-size: 1.5rem;
+      }
     }
-    .extras {
-      margin-top: 10px;
-    }
-    .extras input {
-      width: 100px;
-      padding: 5px;
-      margin-right: 10px;
+
+    @media (max-width: 480px) {
+      .box-container {
+        padding: 20px 10px;
+        gap: 15px;
+      }
+      .custom-section {
+        font-size: 0.95rem;
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <h2>Page One</h2>
-  <div id="liveDate"></div>
 
-  <form id="itemForm" action="page2.html" method="GET">
-    <div class="customer-info">
-      <label for="customerName">Customer Name:</label>
-      <input type="text" id="customerName" name="customerName" placeholder="Enter Name" />
+  <div class="header">
+    Welcome to My Shop
+  </div>
+
+  <div class="image-container">
+    <img src="https://static.vecteezy.com/system/resources/previews/001/822/225/original/group-of-business-people-showing-teamwork-free-vector.jpg" alt="Teamwork Image" />
+  </div>
+
+  <div class="message">
+    Hamare paas <span class="highlight">100+ anubhavshali welding mistry</span> ki ek majboot team hai jo har project ko perfection ke saath complete karti hai. Aapka bharosa, hamari zimmedari!
+  </div>
+
+  <div class="box-container">
+
+    <div class="custom-section" style="background-image: url('https://source.unsplash.com/300x300/?welding');">
+      <a href="page2.html" class="view-all-btn">View All</a>
+      Welding projects ke real photos — dekhiye kaise kaam hota hai!
     </div>
 
-    <button type="button" id="addItemBtn">Add Item</button>
-    <hr />
-
-    <div class="item-row">
-      <input type="text" class="item-input" name="item[]" placeholder="Item" />
-      <input type="text" class="weight-input" name="weight[]" placeholder="Weight" />
-      <input type="text" class="rate-input" name="rate[]" placeholder="Rate" />
-      <input type="text" class="total-input" name="total[]" placeholder="Total" readonly />
-      <button type="button" class="delete-btn">Delete</button>
+    <div class="custom-section" style="background-image: url('https://source.unsplash.com/301x301/?tools');">
+      <a href="page2.html" class="view-all-btn">View All</a>
+      Humare paas modern tools aur trained technicians ki team hai.
     </div>
 
-    <div class="extras">
-      <input type="text" id="extra1" placeholder="Extra 1 (Total Wt)" readonly />
-      <input type="number" id="extra2" placeholder="Extra 2 (Multiplier)" />
-      <input type="text" id="extra3" placeholder="Extra 3 (Result)" readonly />
+    <div class="custom-section" style="background-image: url('https://source.unsplash.com/302x302/?factory');">
+      <a href="page2.html" class="view-all-btn">View All</a>
+      Large-scale projects ke liye industrial setup bhi available hai.
     </div>
 
-    <hr />
-    <button type="submit" id="submitButton">Generate Memo</button>
-  </form>
+  </div>
 
-  <p><a href="index.html">Go back to the main page</a></p>
-
-  <script>
-    function updateLiveDate() {
-      const now = new Date();
-      const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric'
-      };
-      const liveDateStr = now.toLocaleDateString('en-GB', options);
-      document.getElementById('liveDate').textContent = `Live Date: ${liveDateStr}`;
-    }
-
-    updateLiveDate();
-    setInterval(updateLiveDate, 1000);
-
-    const itemForm = document.getElementById('itemForm');
-    const addItemBtn = document.getElementById('addItemBtn');
-
-    const extra1 = document.getElementById('extra1');
-    const extra2 = document.getElementById('extra2');
-    const extra3 = document.getElementById('extra3');
-
-    function updateTotal(row) {
-      const weight = parseFloat(row.querySelector('.weight-input').value) || 0;
-      const rate = parseFloat(row.querySelector('.rate-input').value) || 0;
-      row.querySelector('.total-input').value = (weight * rate).toFixed(2);
-      updateExtras();
-    }
-
-    function updateExtras() {
-      const weights = document.querySelectorAll('.weight-input');
-      let totalWeight = 0;
-      weights.forEach(w => {
-        totalWeight += parseFloat(w.value) || 0;
-      });
-      extra1.value = totalWeight.toFixed(2);
-
-      const multiplier = parseFloat(extra2.value) || 0;
-      extra3.value = (totalWeight * multiplier).toFixed(2);
-    }
-
-    function addInputListeners(row) {
-      row.querySelector('.weight-input').addEventListener('input', () => updateTotal(row));
-      row.querySelector('.rate-input').addEventListener('input', () => updateTotal(row));
-    }
-
-    function addDeleteListener(button) {
-      button.addEventListener('click', function () {
-        const rows = document.querySelectorAll('.item-row');
-        if (rows.length > 1) {
-          this.parentNode.remove();
-          updateExtras();
-        } else {
-          alert('At least one item is required.');
-        }
-      });
-    }
-
-    function applyKeyboardNavigation() {
-      const inputs = document.querySelectorAll('input[type="text"], input[type="number"]');
-      inputs.forEach(input => {
-        input.removeEventListener('keydown', handleKeyNavigation);
-        input.addEventListener('keydown', handleKeyNavigation);
-      });
-    }
-
-    function handleKeyNavigation(e) {
-      const inputs = Array.from(document.querySelectorAll('input[type="text"], input[type="number"]'));
-      const index = inputs.indexOf(e.target);
-
-      if (e.key === "Enter" || e.key === "ArrowDown") {
-        e.preventDefault();
-        if (index + 1 < inputs.length) {
-          inputs[index + 1].focus();
-        }
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        if (index > 0) {
-          inputs[index - 1].focus();
-        }
-      }
-    }
-
-    function createNewRow() {
-      const newItemRow = document.createElement('div');
-      newItemRow.classList.add('item-row');
-      newItemRow.innerHTML = `
-        <input type="text" class="item-input" name="item[]" placeholder="Item" />
-        <input type="text" class="weight-input" name="weight[]" placeholder="Weight" />
-        <input type="text" class="rate-input" name="rate[]" placeholder="Rate" />
-        <input type="text" class="total-input" name="total[]" placeholder="Total" readonly />
-        <button type="button" class="delete-btn">Delete</button>
-      `;
-      const deleteBtn = newItemRow.querySelector('.delete-btn');
-      addDeleteListener(deleteBtn);
-      addInputListeners(newItemRow);
-      itemForm.insertBefore(newItemRow, document.querySelector('.extras'));
-      applyKeyboardNavigation();
-    }
-
-    addItemBtn.addEventListener('click', createNewRow);
-    extra2.addEventListener('input', updateExtras);
-
-    const initialRow = document.querySelector('.item-row');
-    addDeleteListener(initialRow.querySelector('.delete-btn'));
-    addInputListeners(initialRow);
-    applyKeyboardNavigation();
-
-    itemForm.addEventListener('submit', function (event) {
-      const items = document.querySelectorAll('.item-input');
-      for (const item of items) {
-        if (item.value.trim() === '') {
-          alert('Item field cannot be empty.');
-          event.preventDefault();
-          return;
-        }
-      }
-
-      const customerName = document.getElementById('customerName').value;
-      const formParams = new URLSearchParams(new FormData(itemForm));
-
-      // ✅ Live Date को सही ढंग से get किया गया है
-      const liveDate = document.getElementById('liveDate').textContent.replace('Live Date: ', '');
-      formParams.set('liveDate', liveDate);
-      formParams.set('customerName', customerName);
-
-      formParams.delete('extra1');
-      formParams.delete('extra2');
-      formParams.delete('extra3');
-
-      this.action = `page2.html?${formParams.toString()}`;
-    });
-  </script>
 </body>
 </html>
