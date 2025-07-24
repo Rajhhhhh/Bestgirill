@@ -2,68 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Image Gallery</title>
+  <title>My Image Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
       margin: 0;
       padding: 10px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease-in-out;
-      object-fit: cover;
-    }
-    .gallery img:hover {
-      transform: scale(1.03);
+      background-color: #f3f3f3;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 20px;
-      }
-      .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 10px;
-      }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      color: #111;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      padding-bottom: 30px;
+    }
+
+    .gallery img {
+      width: 95%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
     }
   </style>
 </head>
 <body>
   <h1>My Image Gallery</h1>
   <div class="gallery">
-
-    <!-- Images -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kEc_W67w9KqTTw8gbJHUndHadiH3lIkE0CGvfsdCJyDPLxfjbDKQ2P1D&s=10" alt="Image 1" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LzrZiEQbI8akhn7aY-6C-fdOotKQTk9E1Ogl9pqTGv1dKXi9CjC5om8&s=10" alt="Image 2" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHRo5VOxJ1iq8DDt87Z0td3Q3t0wZ6TwtYTFab--I5r3vWfpF-67HMU_0&s=10" alt="Image 3" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTFgrkrfeJbC3QIQ0qA7QJwpvb9LK6QdspPG2AC-MQMlGLiS1puACZ-CL9&s=10" alt="Image 4" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQof8amzJSZgaCpxppME1fcJTYldLHaZOx5Uo90uqQBp4K4AoNTm8yNJo&s=10" alt="Image 5" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjS9_SprqCVHwezjqqao0Gfpm--_2GXK1vse_S4vjjrVJOM7nWvSaqH50&s=10" alt="Image 6" />
-    <img src="https://i.ytimg.com/vi/NdgXsETtwv4/sddefault.jpg?v=66b85562" alt="Image 7" />
-    <img src="https://sc04.alicdn.com/kf/Hb41f89ffa2f3467ead0b07cab1b1f536l.jpg_350x350.jpg" alt="Image 8" />
-    <img src="https://sc04.alicdn.com/kf/HTB1dZakXQL0gK0jSZFtq6xQCXXa1.jpg" alt="Image 9" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgrwjCYp66aWtwHO7ykzyZsH6-jsqXtBmxOJTh3aDueO-07Cppq2avv0k&s=10" alt="Image 10" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmPiIN0jF6gJUeoQHA2On2nRjBnw08VGBQXzQ1jH3ULy2SvfUhxwOkLNI&s=10" alt="Image 11" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj2qhhd-MHgpaPkQyM-2popmeO80t-QfDCidO1lNq72M7T6OCSs-Pw8yx-&s=10" alt="Image 12" />
-    <img src="https://via.placeholder.com/300x200?text=Image+13" alt="Image 13" />
-
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kEc_W67w9KqTTw8gbJHUndHadiH3lIkE0CGvfsdCJyDPLxfjbDKQ2P1D&s=10" alt="Gate 1" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LzrZiEQbI8akhn7aY-6C-fdOotKQTk9E1Ogl9pqTGv1dKXi9CjC5om8&s=10" alt="Gate 2" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHRo5VOxJ1iq8DDt87Z0td3Q3t0wZ6TwtYTFab--I5r3vWfpF-67HMU_0&s=10" alt="Gate 3" />
+    <img src="https://sc04.alicdn.com/kf/HTB1dZakXQL0gK0jSZFtq6xQCXXa1.jpg" alt="Gate 4" />
+    <img src="https://sc04.alicdn.com/kf/Hb41f89ffa2f3467ead0b07cab1b1f536l.jpg_350x350.jpg" alt="Gate 5" />
   </div>
 </body>
 </html>
