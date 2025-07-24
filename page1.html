@@ -1,1 +1,102 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form to WhatsApp</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d1f4e5, #f0f8ff);
+      padding: 30px;
+      margin: 0;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+      font-size: 26px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 15px;
+      margin: 12px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 18px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #25D366;
+      box-shadow: 0 0 5px #25D36655;
+    }
+
+    button {
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1ca855;
+    }
+
+    @media screen and (max-width: 600px) {
+      form {
+        padding: 20px;
+        border-radius: 15px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      input, button {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form id="whatsappForm">
+    <h2>Submit Your Details</h2>
+    <input type="text" id="name" placeholder="Enter Your Name" required>
+    <input type="tel" id="mobile" placeholder="Enter Mobile Number" required>
+    <input type="text" id="state" placeholder="Enter Your State" required>
+    <input type="text" id="district" placeholder="Enter Your District" required>
+    <button type="submit">Send to WhatsApp</button>
+  </form>
+
+  <script>
+    document.getElementById("whatsappForm").addEventListener("submit", function(event){
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+      const state = document.getElementById("state").value.trim();
+      const district = document.getElementById("district").value.trim();
+
+      const message = `Name: ${name}%0AMobile: ${mobile}%0AState: ${state}%0ADistrict: ${district}`;
+      const phoneNumber = "7369022818";
+      const whatsappURL = `https://wa.me/91${phoneNumber}?text=${message}`;
+
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+
+</body>
+</html>
