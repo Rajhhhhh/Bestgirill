@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>My Image Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
-      padding: 10px;
-      background-color: #f3f3f3;
+      padding: 20px;
+      background-color: #f0f0f0;
       font-family: 'Segoe UI', sans-serif;
     }
 
     h1 {
       text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      margin-top: 20px;
       margin-bottom: 30px;
-      color: #111;
+      color: #222;
+      font-size: 28px;
     }
 
     .gallery {
@@ -26,30 +24,55 @@
       flex-direction: column;
       gap: 20px;
       align-items: center;
-      padding-bottom: 30px;
+    }
+
+    .gallery a {
+      display: block;
+      width: 95%;
+      max-width: 600px;
     }
 
     .gallery img {
-      width: 95%;
-      max-width: 600px;
+      width: 100%;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
 
     .gallery img:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
+    }
+
+    @media (min-width: 768px) {
+      .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .gallery a {
+        width: 45%;
+      }
     }
   </style>
 </head>
 <body>
+
   <h1>My Image Gallery</h1>
+
   <div class="gallery">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kEc_W67w9KqTTw8gbJHUndHadiH3lIkE0CGvfsdCJyDPLxfjbDKQ2P1D&s=10" alt="Gate 1" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LzrZiEQbI8akhn7aY-6C-fdOotKQTk9E1Ogl9pqTGv1dKXi9CjC5om8&s=10" alt="Gate 2" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHRo5VOxJ1iq8DDt87Z0td3Q3t0wZ6TwtYTFab--I5r3vWfpF-67HMU_0&s=10" alt="Gate 3" />
-    <img src="https://sc04.alicdn.com/kf/HTB1dZakXQL0gK0jSZFtq6xQCXXa1.jpg" alt="Gate 4" />
-    <img src="https://sc04.alicdn.com/kf/Hb41f89ffa2f3467ead0b07cab1b1f536l.jpg_350x350.jpg" alt="Gate 5" />
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kEc_W67w9KqTTw8gbJHUndHadiH3lIkE0CGvfsdCJyDPLxfjbDKQ2P1D&s=10" alt="Gate 1">
+    </a>
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LzrZiEQbI8akhn7aY-6C-fdOotKQTk9E1Ogl9pqTGv1dKXi9CjC5om8&s=10" alt="Gate 2">
+    </a>
+    <a href="page1.html">
+      <img src="https://sc04.alicdn.com/kf/HTB1dZakXQL0gK0jSZFtq6xQCXXa1.jpg" alt="Gate 3">
+    </a>
+    <a href="page1.html">
+      <img src="https://sc04.alicdn.com/kf/Hb41f89ffa2f3467ead0b07cab1b1f536l.jpg_350x350.jpg" alt="Gate 4">
+    </a>
   </div>
+
 </body>
 </html>
