@@ -1,1 +1,88 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #222;
+      font-size: 28px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .gallery a {
+      display: block;
+      width: 95%;
+      max-width: 600px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (min-width: 768px) {
+      .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .gallery a {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+    
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtckQljHM1n2n4HIaujBSpQjrWrsIJwHyr5tytrbG-mNFa1-j3b421XnkF&s=10" alt="Gate 2">
+    </a>
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRetbACl2lgRDDVUmDP4cotSKzViP2ngfcF1ZHypahaLi1sASJWe05ZqPHY&s=10" alt="Gate 2">
+    </a>
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCaslINTftzDjPXeDoN4SGjercjeWbJvPT5blA8bCnmyjxGNEbVkQWITM&s=10" alt="Gate 2">
+    </a>
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvaMXXXW9diHnlGKBTXejEksSIDFrBjPJSNuFnXMWp0PuoMLm40NEARpJw&s=10" alt="Gate 2">
+    </a>
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Fz8Z6Z8W3rxg6oRh6P_9mZzsmw0PjJgyo-HYLJkLa7dK3_r0fWAzt8Q&s=10" alt="Gate 2">
+    </a>
+    <a href="page1.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSznQTlDKauzNj59hysuMZPo0CaCLlmyTqxNnqa5NhodTXQVEtiMSDf83Q&s=10" alt="Gate 2">
+    </a>
+
+    
+  </div>
+
+</body>
+</html>
